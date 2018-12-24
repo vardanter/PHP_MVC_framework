@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #5983d1;
+}
+
+b {
+    font-weigth: 700;
+    font-style: normal;
+}
+ul, li{
+    list-style: none;
+}
+
+.hidden {
+    display: none !important;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    background: url("../images/white_background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 4rem;
+    padding: 0 1rem;
+    background: rgba(255,255,255,.8);
+    box-shadow: 0 0 0.25rem rgba(0,0,0,.3);
+}
+
+.header__navbar {
+    display: flex;
+    align-items: stretch;
+}
+
+.header__navbar-item {
+    position: relative;
+    border-bottom: 2px solid transparent;
+    margin-left: 1rem;
+    padding: 0.25rem 0;
+    transition: border-bottom .3s;
+}
+
+.header__navbar-item:hover {
+    border-bottom: 2px solid #5983d1;
+}
+
+.header__navbar-link {
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.header__navbar-subnavbar {
+    overflow: hidden;
+    position: absolute;
+    bottom: -1.5rem;
+    background: rgba(255,255,255,.8);
+    padding: 0 0.5rem;
+    left: -0.5rem;
+    text-align: center;
+}
+
+.header__navbar-item:hover .hidden {
+    display: block !important;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 50rem;
+    min-height: 20rem;
+    border-radius: 0.5rem;
+    overflow: auto;
+}
+
+.content__info {
+    flex: 0;
+    min-width: 15rem;
+    padding: 1rem;
+    background: rgba(255,255,255,.4);
+}
+
+.content__info-text-title {
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid #aaaaaa;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.content__info-description {
+    font-size: 0.9rem;
+    color: #444444;
+    text-shadow: 1px 1px 0px rgba(143,207,245,.6), 1rem 1rem 0.5rem rgba(0,0,0,.2);
+}
+
+.content__forms {
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255,255,255,.8);
+    padding: 1rem;
+}
+
+.content__forms-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.form {
+    width: 24rem;
+}
+
+.form__item-group {
+    margin-bottom: 1.5rem;
+}
+
+.form__item-label {
+    font-size: 0.9rem;
+}
+
+.form__item {
+    width: 100%;
+    height: 2.5rem;
+    padding: 0 0.25rem;
+    border: 1px solid #cdcdcd;
+    border-radius: 0.25rem;
+    transition: box-shadow .3s, border .3s;
+}
+
+.error > .form__item {
+    border: 1px solid #ff0000;
+}
+
+.form__item:focus {
+    border: 1px solid transparent;
+    box-shadow: 0 0 0.25rem #5983d1;
+    outline: none;
+}
+
+.form__item-hint {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 300;
+    font-style: italic;
+    color: #888888;
+    padding: 0 0.25rem;
+}
+
+.required:before {
+    content: "*";
+    padding-left: 0.5rem;
+    color: #ff0000;
+}
+
+.button {
+    border: none;
+    background: none;
+}
+
+.input-checkbox {
+    display: inline;
+    width: auto;
+    height: auto;
+}
+
+.inline {
+    display: inline;
+}
+
+.form__button {
+    border: 1px solid #5983d1;
+    border-radius: .25rem;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    background: #5983d1;
+
+}
+
+.form__item-error {
+    display: block;
+    font-size: 0.75rem;
+    color: #ff0000;
+}
+
+.profile__container {
+    display: flex;
+    flex: 1;
+    padding: 3rem;
+}
+
+.profile__image {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: -15px 15px 20px rgba(0,0,0,.3);
+}
+
+.profile__image img {
+    width: 15rem;
+    height: 15rem;
+    object-fit: cover;
+}
+
+.profile__info {
+    flex: 1;
+    margin-left: 1rem;
+    padding: 0.75rem;
+    background: rgba(255,255,255,.6);
+    border-radius: 1rem;
+    color: #666;
+}
+
+.profile__info > h1 {
+    padding-bottom: 0.3rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #999999;
+}
+
+.profile__info-row {
+    display: flex;
+    margin-bottom: 0.5rem;
+}
+
+.info-prop {
+    width: 10rem;
+}
